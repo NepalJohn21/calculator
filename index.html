@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js" integrity="sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=360, initial-scale=1.0">
@@ -39,7 +40,6 @@
         <div class="col5">
             <button onclick="typeDigit('/')" type="submit">/</button>
             <button onclick="typeDigit('0')" type="submit">0</button>
-            <button onclick="typeDigit('e')" type="submit">e</button>
         </div>
         <div class="col6">
             <button onclick="convertMath('log10')" type="submit">log10</button>
@@ -61,6 +61,18 @@
         function typeDigit(value) {
             number += value
             localStorage.calculatortaps = Number(localStorage.calculatortaps) + 1;
+        }
+
+        function convertMath(id) {
+            if (id == "log10") {
+                number = String(new Decimal(new Decimal(number).log10()))
+            }
+        }
+
+        function calculate() {
+            let x = Number(number)
+            let y = math.evaluate(x)
+            number = String(new Decimal(y))
         }
 
         // Intervals
