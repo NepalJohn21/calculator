@@ -1,0 +1,11 @@
+steps:
+      - uses: actions/checkout@master
+      - run: |
+        npm install
+        npm build
+        # ... other build steps
+      - uses: fatton139/pr-comment-file-size@main
+        with:
+          dist_path: "./path-to-output-dir-or-file"
+          update_comment: false
+          token: ${{ secrets.GITHUB_TOKEN }}
