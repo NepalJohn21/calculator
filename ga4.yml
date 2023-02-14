@@ -1,0 +1,2 @@
+- name: GA4 Event
+  uses: Dylan700/ga4-action@v1.4.1
