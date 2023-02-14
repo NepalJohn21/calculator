@@ -14,7 +14,7 @@
         <button onclick="setTab('anaytics')">Anaytics</button>
         <button onclick="settab('settings')">Settings</button>
     </div>
-    <div class="calc">
+    <div class="tab-calc">
         <p class="data-number">0</p>
         <div class="col1">
             <button onclick="typeDigit('1')" type="submit">1</button>
@@ -47,5 +47,20 @@
             <button onclick="clear()" type="submit">C</button>
         </div>
     </div>
+    <script src="break_eternity.js"></script>
+    <script>
+        // Calculator Variables
+        var number = String(new Decimal(0))
+
+        // Anaytics Data
+        localStorage.setItem("calculatortaps", 0)
+        localStorage.setItem("calculatortime", 0)
+
+        // Functions
+        function typeDigits(value) {
+            number += value
+            localStorage.calculatortaps = Number(localStorage.calculatortaps) + 1;
+        }
+    </script>
 </body>
 </html>
