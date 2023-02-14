@@ -61,6 +61,8 @@
         <h1>MANAGE LINK</h1>
         <button onclick="navigator.clipboard.writeText(document.URL)" type="submit">Copy Link</button>
         <button onclick="prompt('Yet copy this link and paste own social apps:', document.URL)" type="submit">Share this link</button>
+        <h1>OTHER SETTINGS</h1>
+        <button onclick="why1()" type="submit">Clear All Data</button>
     </div>
     <script src="break_eternity.js"></script>
     <script>
@@ -70,6 +72,7 @@
         var tabE2 = document.querySelector(".tab-anaytics")
         var tabE3 = document.querySelector(".tab-changelog")
         var tabE4 = document.querySelector(".tab-settings")
+        let warningdetail;
 
         // Calculator Variables
         var number = String(new Decimal(0))
@@ -107,6 +110,15 @@
 
         function setTab(newValue) {
             tab = newValue
+        }
+
+        function why1() {
+            warningdetail = prompt("Why sure to Clear All Data? Please type CLEAR_ALL in the box:", "DEFAULT")
+
+            if (warningdetail == "CLEAR_ALL") {
+                localStorage.setItem("calculatortaps", 0)
+                localStorage.setItem("calculatortime", 0)
+            }
         }
 
         // Intervals
