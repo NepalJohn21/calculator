@@ -69,6 +69,7 @@
         var tabE1 = document.querySelector(".tab-calc")
         var tabE2 = document.querySelector(".tab-anaytics")
         var tabE3 = document.querySelector(".tab-changelog")
+        var tabE3 = document.querySelector(".tab-settings")
 
         const shareData = {
             title: document.title,
@@ -137,6 +138,12 @@
                 tabE3.style.display = "none"
             } else {
                 tabE3.style.display = "block"
+            }
+
+            if (!(tab == "settings")) {
+                tabE4.style.display = "none"
+            } else {
+                tabE4.style.display = "block"
             }
         }, 100);
 
