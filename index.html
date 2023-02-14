@@ -60,7 +60,7 @@
     <div class="tab-settings">
         <h1>MANAGE LINK</h1>
         <button onclick="navigator.clipboard.writeText(document.URL)" type="submit">Copy Link</button>
-        <button onclick="navigator.share(shareData)" type="submit">Share this link</button>
+        <button onclick="prompt('Yet copy this link and paste own social apps:', document.URL)" type="submit">Share this link</button>
     </div>
     <script src="break_eternity.js"></script>
     <script>
@@ -70,12 +70,6 @@
         var tabE2 = document.querySelector(".tab-anaytics")
         var tabE3 = document.querySelector(".tab-changelog")
         var tabE4 = document.querySelector(".tab-settings")
-
-        const shareData = {
-            title: document.title,
-            text: 'Check out this website...',
-            url: document.URL
-        }
 
         // Calculator Variables
         var number = String(new Decimal(0))
