@@ -51,12 +51,19 @@
         <h1><span class="counter1">0</span> Seconds Plays</h1>
         <h1><span class="counter2">0</span> Button Taps</h1>
     </div>
+    <div class="tab-changelog">
+        <details>
+            <summary>1.0.0</summary>
+            <p>New released!</p>
+        </details>
+    </div>
     <script src="break_eternity.js"></script>
     <script>
         // Data
         var tab = "calc"
         var tabE1 = document.querySelector(".tab-calc")
         var tabE2 = document.querySelector(".tab-anaytics")
+        var tabE3 = document.querySelector(".tab-changelog")
 
         // Calculator Variables
         var number = String(new Decimal(0))
@@ -114,11 +121,20 @@
             } else {
                 tabE2.style.display = "block"
             }
+
+            if (!(tab == "changelog")) {
+                tabE3.style.display = "none"
+            } else {
+                tabE3.style.display = "block"
+            }
         }, 100);
 
         setInterval(() => {
             localStorage.calculatortime = Number(localStorage.calculatortime) + 1;
         }, 1000);
     </script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-63e6b33fed01c7bd"></script>
+
 </body>
 </html>
