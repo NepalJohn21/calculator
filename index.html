@@ -47,11 +47,24 @@
             <button onclick="clear()" type="submit">C</button>
         </div>
     </div>
+    <div class="tab-anaytics">
+        <h1><span class="counter1">0</span> Seconds Plays</h1>
+        <h1><span class="counter2">0</span> Button Taps</h1>
+    </div>
     <script src="break_eternity.js"></script>
     <script>
+        // Data
+        var tab = "calc"
+        var tabE1 = document.querySelector(".tab-calc")
+        var tabE2 = document.querySelector(".tab-anaytics")
+
         // Calculator Variables
         var number = String(new Decimal(0))
         var number2 = document.querySelector(".data-number")
+
+        // Anaytics Elements
+        var counter_element1 = docuemnt.querySelector(".counter1")
+        var counter_element2 = docuemnt.querySelector(".counter2")
 
         // Anaytics Data
         localStorage.setItem("calculatortaps", 0)
@@ -78,6 +91,21 @@
         // Intervals
         setInterval(() => {
             number2.innerText = number
+
+            counter_element1.innerText = localStorage.calculatortaps;
+            counter_element2.innerText = localStorage.calculatortime;
+
+            if (!(tab == "calc")) {
+                tabE1.style.display = "none"
+            } else {
+                tabE1.style.display = "block"
+            }
+
+            if (!(tab == "anaytics")) {
+                tabE2.style.display = "none"
+            } else {
+                tabE2.style.display = "block"
+            }
         }, 100);
 
         setInterval(() => {
