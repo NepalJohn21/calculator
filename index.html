@@ -57,6 +57,11 @@
             <p>New released!</p>
         </details>
     </div>
+    <div class="tab-settings">
+        <h1>MANAGE LINK</h1>
+        <button onclick="navigator.clipboard.writeText(document.URL)" type="submit">Copy Link</button>
+        <button onclick="navigator.share()" type="submit">Share this link</button>
+    </div>
     <script src="break_eternity.js"></script>
     <script>
         // Data
@@ -64,6 +69,12 @@
         var tabE1 = document.querySelector(".tab-calc")
         var tabE2 = document.querySelector(".tab-anaytics")
         var tabE3 = document.querySelector(".tab-changelog")
+
+        const shareData = {
+            title: document.title,
+            text: 'Check out this website...',
+            url: document.URL
+        }
 
         // Calculator Variables
         var number = String(new Decimal(0))
