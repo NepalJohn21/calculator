@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=360, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>break_eternity.js Calculator</h1>
+    <div>
+        <button onclick="setTab('calc')">Calculator</button>
+        <button onclick="setTab('changelog')">Changelog</button>
+        <button onclick="setTab('anaytics')">Anaytics</button>
+        <button onclick="settab('settings')">Settings</button>
+    </div>
+    <div class="calc">
+        <p class="data-number">0</p>
+        <div class="col1">
+            <button onclick="typeDigit('1')" type="submit">1</button>
+            <button onclick="typeDigit('2')" type="submit">2</button>
+            <button onclick="typeDigit('3')" type="submit">3</button>
+        </div>
+        <div class="col2">
+            <button onclick="typeDigit('4')" type="submit">4</button>
+            <button onclick="typeDigit('5')" type="submit">5</button>
+            <button onclick="typeDigit('6')" type="submit">6</button>
+        </div>
+        <div class="col3">
+            <button onclick="typeDigit('7')" type="submit">7</button>
+            <button onclick="typeDigit('8')" type="submit">8</button>
+            <button onclick="typeDigit('9')" type="submit">9</button>
+        </div>
+        <div class="col4">
+            <button onclick="typeDigit('+')" type="submit">+</button>
+            <button onclick="typeDigit('-')" type="submit">-</button>
+            <button onclick="typeDigit('*')" type="submit">*</button>
+        </div>
+        <div class="col5">
+            <button onclick="typeDigit('/')" type="submit">/</button>
+            <button onclick="typeDigit('0')" type="submit">0</button>
+            <button onclick="typeDigit('e')" type="submit">e</button>
+        </div>
+        <div class="col6">
+            <button onclick="convertMath('log10')" type="submit">log10</button>
+            <button onclick="calculate()" type="submit">=</button>
+            <button onclick="clear()" type="submit">C</button>
+        </div>
+    </div>
+</body>
+</html>
