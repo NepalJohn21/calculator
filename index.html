@@ -51,6 +51,7 @@
     <script>
         // Calculator Variables
         var number = String(new Decimal(0))
+        var number2 = document.querySelector(".data-number")
 
         // Anaytics Data
         localStorage.setItem("calculatortaps", 0)
@@ -61,6 +62,15 @@
             number += value
             localStorage.calculatortaps = Number(localStorage.calculatortaps) + 1;
         }
+
+        // Intervals
+        setInterval(() => {
+            number2.innerText = number
+        }, 100);
+
+        setInterval(() => {
+            localStorage.calculatortime = Number(localStorage.calculatortime) + 1;
+        }, 1000);
     </script>
 </body>
 </html>
