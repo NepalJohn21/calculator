@@ -13,7 +13,7 @@
         <button onclick="setTab('calc')">Calculator</button>
         <button onclick="setTab('changelog')">Changelog</button>
         <button onclick="setTab('anaytics')">Anaytics</button>
-        <button onclick="settab('settings')">Settings</button>
+        <button onclick="setTab('settings')">Settings</button>
     </div>
     <div class="tab-calc">
         <p class="data-number">0</p>
@@ -86,6 +86,10 @@
             let x = Number(number)
             let y = math.evaluate(x)
             number = String(new Decimal(y))
+        }
+
+        function setTab(newValue) {
+            tab = newValue
         }
 
         // Intervals
